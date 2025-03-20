@@ -40,6 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     logLine("Ideaboard Flasher & Terminal loaded.");
+
+    // Add this new event listener
+    document.getElementById("noDeviceLink").addEventListener("click", (e) => {
+        e.preventDefault();
+        const driverInfo = document.getElementById("driverInfo");
+        driverInfo.style.display = driverInfo.style.display === "none" ? "block" : "none";
+    });
 });
 
 function logLine(text) {
